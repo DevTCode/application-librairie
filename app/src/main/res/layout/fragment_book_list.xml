@@ -1,0 +1,88 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    tools:context=".ui.BookListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Barre de recherche -->
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search by title"
+            android:textColorHint="@color/white"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF5722"
+            android:padding="12dp"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/categoryLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Filter by category"
+            android:textColor="#FFFFFF"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="20sp"
+            android:paddingBottom="4dp" />
+
+        <!-- Filtrage par catégorie (Spinner) -->
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="16dp"
+            android:text="All Books"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewBooks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fabAddBook"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_add_button"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        app:backgroundTint="#FF5722" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_logout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_gravity="bottom|start"
+        app:backgroundTint="#FF5722" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
