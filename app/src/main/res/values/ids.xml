@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="skipBtn" type="id" />
+    <item name="signupBtn" type="id" />
+    <item name="loginBtn" type="id" />
+    <item name="welcomeText" type="id" />
+    <item name="buttonContainer" type="id" />
+    <item name="iconIv" type="id" />
+</resources>
